@@ -1,0 +1,28 @@
+{
+  "Employee": [
+    {
+      "emp_id": 100, 
+      "position": "Client Service", 
+      "years_active": 3, 
+      "name": "Amita"
+    }, 
+    {
+      "emp_id": 200, 
+      "position": "324 Main Street", 
+      "years_active": 8, 
+      "name": "VIP Client Service"
+    }, 
+    {
+      "emp_id": 300, 
+      "position": "Manager", 
+      "years_active": 20, 
+      "name": "Dhruv"
+    }, 
+    {
+      "emp_id": 700, 
+      "position": "client services", 
+      "years_active": 9, 
+      "name": "dasy"
+    }
+  ]
+}

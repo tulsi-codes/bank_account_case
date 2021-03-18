@@ -1,0 +1,28 @@
+{
+  "Account": [
+    {
+      "loan_balance": 0, 
+      "saving": 5000, 
+      "account_id": 1, 
+      "checking": 900, 
+      "investing_balance": 1000000, 
+      "creditcard_balance": 0
+    }, 
+    {
+      "loan_balance": 800000, 
+      "saving": 200, 
+      "account_id": 2, 
+      "checking": 20, 
+      "investing_balance": 0, 
+      "creditcard_balance": 0
+    }, 
+    {
+      "loan_balance": 5000, 
+      "saving": 80000, 
+      "account_id": 3, 
+      "checking": 20000, 
+      "investing_balance": 0, 
+      "creditcard_balance": 600
+    }
+  ]
+}

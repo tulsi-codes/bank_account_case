@@ -1,0 +1,70 @@
+{
+  "log_file": [
+    {
+      "type_account": "investments", 
+      "add": 0, 
+      "account_id": 1, 
+      "subtracted": 900
+    }, 
+    {
+      "type_account": "saving", 
+      "add": 0, 
+      "account_id": 1, 
+      "subtracted": 50
+    }, 
+    {
+      "type_account": "checking", 
+      "add": 100, 
+      "account_id": 1, 
+      "subtracted": 0
+    }, 
+    {
+      "type_account": "saving", 
+      "add": 0, 
+      "account_id": 1, 
+      "subtracted": 50
+    }, 
+    {
+      "type_account": "checking", 
+      "add": 100, 
+      "account_id": 1, 
+      "subtracted": 0
+    }, 
+    {
+      "type_account": "saving", 
+      "add": 0, 
+      "account_id": 1, 
+      "subtracted": 50
+    }, 
+    {
+      "type_account": "checking", 
+      "add": 100, 
+      "account_id": 1, 
+      "subtracted": 0
+    }, 
+    {
+      "type_account": "saving", 
+      "add": 0, 
+      "account_id": 1, 
+      "subtracted": 50
+    }, 
+    {
+      "type_account": "checking", 
+      "add": 100, 
+      "account_id": 1, 
+      "subtracted": 0
+    }, 
+    {
+      "type_account": "saving", 
+      "add": 0, 
+      "account_id": 1, 
+      "subtracted": 50
+    }, 
+    {
+      "type_account": "checking", 
+      "add": 100, 
+      "account_id": 1, 
+      "subtracted": 0
+    }
+  ]
+}
