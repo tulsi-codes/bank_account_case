@@ -2,10 +2,10 @@ import json
 #JSON was not the best way to do this but I needed practice in JSON which is why i choose it! 
 #I know there are ways to shorten this code -- hoping to go over this in our next meeting
 
-clients = "/Users/tulsipatel/Documents/DataEngineering/clients.json"
-employees = "/Users/tulsipatel/Documents/DataEngineering/emp.json"
-accounts = "/Users/tulsipatel/Documents/DataEngineering/account.json"
-log_activity = "/Users/tulsipatel/Documents/DataEngineering/log_activity.json"
+clients = "/Users/tulsipatel/Documents/DataEngineering/BankAccount/clients.json"
+employees = "/Users/tulsipatel/Documents/DataEngineering/BankAccount/emp.json"
+accounts = "/Users/tulsipatel/Documents/DataEngineering/BankAccount/account.json"
+log_activity = "/Users/tulsipatel/Documents/DataEngineering/BankAccount/log_activity.json"
 
 class BankAccount:
     #takes initial values (only for money use)
@@ -152,16 +152,109 @@ class BankAccount:
 
 
 
-#tests all the functions avalible 
+#there is test info a the bottom you can use 
 #all new info! just run to test :)
 
-t = BankAccount(50,1,"saving") 
-t.withdraw()
-d = BankAccount(100,1,"checking") 
-d.deposit()
-z = BankAccount()
-z.new_client(5, "Kim", "Kardashian", "509 table street", "555-342-2431", ["inventments"], 700)
-q = BankAccount() 
-q.new_emp("Rob", "client services", 10, 900)
+#code below is for the user in the command line 
+
+user_input = input("What would you like to do \n 1: Withdraw or \
+Deposit money into an account \n 2: Open a new account \n 3: Add new empoloyee: ")
+
+
+if user_input == 1:
+    one = input("Do you want to withdraw (W) or deposit (D): ")
+    if one == "D":
+        while True:
+            try:
+                amount = int(input("Enter the Amount: "))
+                break
+            except ValueError:
+                print("Opps! You need to enter a number!")
+        while True:
+            try:
+                ID = int(input("Enter the ID: "))
+                break 
+            except ValueError:
+                print("Opps! You need to enter a number!")
+        while True:
+            try:
+                Account = input("Enter the account type: ")
+                break 
+            except KeyError:
+                print("Enter a valid account type for the ID:")
+        d = BankAccount(amount, ID, Account) 
+        d.deposit()
+    if one == "W":
+        while True:
+            try:
+                amount = input("Enter the Amount: ")
+                break
+            except ValueError:
+                print("Opps! You need to enter a number!")
+        while True:
+            try:
+                ID = int(input("Enter the ID: "))
+                break 
+            except ValueError:
+                print("Opps! You need to enter a number!")
+        Account = input("Enter the account type: ")
+        d = BankAccount(amount, ID, Account) 
+        d.withdraw()
+
+elif user_input == 2:
+    while True:
+        try:
+            ID = int(input("Enter the ID: "))
+            break 
+        except ValueError:
+            print("Opps! You need to enter a number!")
+    f_name = input("Enter first name: ")
+    l_name = input("Enter last name: ")
+    address = input("Enter address: ")
+    phone_num = input("Enter phone number: ")
+    while True:
+        try:
+            emp_id = int(input("Enter the emp_id of the employee that will help them: "))
+            break 
+        except ValueError:
+            print("Opps! You need to enter a number!") 
+    services_l = input("How many acccounts do you want to open: ")
+    services = []
+    for i in range(services_l):
+        indicator = i 
+        ask = input("what type of account will it ,{indicator}, be: ")
+        services.append(ask)
+    n = BankAccount() 
+    n.new_client(ID, f_name, l_name, address, phone_num, services, emp_id)
+
+
+elif user_input == 3:
+    name = input("Enter name: ")
+    position = input("Enter position: ")
+    while True:
+        try:
+            years_active = int(input("Enter the years active: "))
+            break
+        except NameError:
+            print("Opps! You need to enter a number!")
+    while True:
+        try:
+            emp_id = int(input("Enter the ID: "))
+            break 
+        except ValueError:
+            print("Opps! You need to enter a number!")
+    t = BankAccount()
+    t.new_emp(name, position, years_active, emp_id)
+
+
+
+#t = BankAccount(50,1,"saving") 
+#t.withdraw()
+#d = BankAccount(100,1,"checking") 
+#d.deposit()
+#z = BankAccount()
+#z.new_client(5, "Kim", "Kardashian", "509 table street", "555-342-2431", ["inventments"], 700)
+#q = BankAccount() 
+#q.new_emp("Rob", "client services", 10, 900)
 
 
